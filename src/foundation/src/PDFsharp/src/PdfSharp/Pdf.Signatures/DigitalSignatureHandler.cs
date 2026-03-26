@@ -241,7 +241,7 @@ namespace PdfSharp.Pdf.Signatures
 
             signatureDic.Elements.Add(PdfSignature.Keys.Type, new PdfName(PdfFormFieldType.Signature));
             signatureDic.Elements.Add(PdfSignature.Keys.Filter, new PdfName("/Adobe.PPKLite"));
-            signatureDic.Elements.Add(PdfSignature.Keys.SubFilter, new PdfName("/adbe.pkcs7.detached"));
+            signatureDic.Elements.Add(PdfSignature.Keys.SubFilter, new PdfName("/ETSI.CAdES.detached"));
             signatureDic.Elements.Add(PdfSignature.Keys.M, new PdfDate(DateTimeOffset.Now));
 
             signatureDic.Elements.Add(PdfSignature.Keys.Contents, contents);
