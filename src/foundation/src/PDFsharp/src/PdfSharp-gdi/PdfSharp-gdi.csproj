@@ -8,8 +8,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <DefineConstants>GDI</DefineConstants>
     <PackageId>$(AssemblyName)</PackageId>
-    <SignAssembly>True</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\..\..\..\..\StrongnameKey.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>false</SignAssembly>
     <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
   </PropertyGroup>
@@ -484,10 +483,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <InternalsVisibleTo Include="PDFsharp.Tests-gdi,             PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PDFsharp.TestHelper-gdi,        PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PDFsharp.BarCodes-gdi,          PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.Annotations.Tests-gdi, PublicKey=$(PDFsharpStronNamePublicKey)" />
+    <InternalsVisibleTo Include="PDFsharp.Tests-gdi" />
+    <InternalsVisibleTo Include="PDFsharp.TestHelper-gdi" />
+    <InternalsVisibleTo Include="PDFsharp.BarCodes-gdi" />
+    <InternalsVisibleTo Include="PdfSharp.Annotations.Tests-gdi" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     
   <PropertyGroup>
+    <PackageId>Sensoneo.PdfSharp.Imaging</PackageId>
     <TargetFrameworks>$(PDFsharpTargetFrameworks_Library)</TargetFrameworks>
     <RootNamespace>PdfSharp.Internal.Imaging</RootNamespace>
     <DefineConstants>CORE</DefineConstants>
-    <SignAssembly>True</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\..\..\..\..\StrongnameKey.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -26,8 +26,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <InternalsVisibleTo Include="PdfSharp,     PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp-gdi, PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp-wpf, PublicKey=$(PDFsharpStronNamePublicKey)" />
+    <InternalsVisibleTo Include="PdfSharp" />
+    <InternalsVisibleTo Include="PdfSharp-gdi" />
+    <InternalsVisibleTo Include="PdfSharp-wpf" />
   </ItemGroup>
 </Project>

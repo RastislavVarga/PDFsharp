@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     
   <PropertyGroup>
+    <PackageId>Sensoneo.PdfSharp.System</PackageId>
     <TargetFrameworks>$(PDFsharpTargetFrameworks_Library)</TargetFrameworks>
     <RootNamespace>PdfSharp</RootNamespace>
     <!--<Error Condition="!Exists('C:\Process\Fail.txt')" Text="Process did not pass!" />-->
-    <SignAssembly>True</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\..\..\..\..\StrongnameKey.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>false</SignAssembly>
 
     <!-- Removed IsAotCompatible/IsTrimmable because it causes problems with C# 14 Extension Anything code. -->
     <!--<IsTrimmable Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net6.0'))">true</IsTrimmable>-->

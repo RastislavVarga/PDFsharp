@@ -6,8 +6,7 @@
     PDFsharp internal class RuntimeHelpers is visible in this assembly because of InternalsVisibleTo.
     This conflics with mscorlib. -->
     <NoWarn>$(NoWarn);1685</NoWarn>
-    <SignAssembly>True</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\..\..\..\..\StrongnameKey.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

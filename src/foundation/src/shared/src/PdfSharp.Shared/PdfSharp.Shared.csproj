@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     
   <PropertyGroup>
+    <PackageId>Sensoneo.PdfSharp.Shared</PackageId>
     <TargetFrameworks>$(PDFsharpTargetFrameworks_Library)</TargetFrameworks>
     <RootNamespace>PdfSharp</RootNamespace>
-    <SignAssembly>True</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\..\..\..\..\StrongnameKey.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>false</SignAssembly>
 
     <!-- Removed IsAotCompatible/IsTrimmable because it causes problems with C# 14 Extension Anything code. -->
     <!--<IsTrimmable Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net6.0'))">true</IsTrimmable>-->
@@ -32,51 +32,51 @@
          For now we use the whole public key instead.
     <InternalsVisibleTo Include="$(AssemblyName).Tests, PublicKeyToken=f94615aa0424f9eb" />
     <InternalsVisibleTo Include="$(AssemblyName).TestHelper, PublicKeyToken=f94615aa0424f9eb" />-->
-    <InternalsVisibleTo Include="PdfSharp.System,              PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp,                     PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp-gdi,                 PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp-wpf,                 PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.Imaging,             PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.OpenType,            PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.Charting,            PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.Charting.Graphics,   PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.Charting-gdi,        PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.Charting-wpf,        PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.Cryptography,        PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.BarCodes,            PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.BarCodes-gdi,        PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.BarCodes-wpf,        PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="MigraDoc.DocumentObjectModel, PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="MigraDoc.Rendering,           PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="MigraDoc.Rendering-gdi,       PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="MigraDoc.Rendering-wpf,       PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="MigraDoc.RtfRendering,        PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="MigraDoc.RtfRendering-gdi,    PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="MigraDoc.RtfRendering-wpf,    PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.Quality,             PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.Quality-gdi,         PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.Quality-wpf,         PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <!--<InternalsVisibleTo Include="PdfSharp.System,              PublicKey=$(PDFsharpStronNamePublicKey)" />-->
-    <InternalsVisibleTo Include="PdfSharp.Shared-gdi,          PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.Shared-wpf,          PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.TestHelper,          PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.TestHelper-gdi,      PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.TestHelper-wpf,      PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.Tests,               PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.Tests-gdi,           PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.Tests-wpf,           PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="Shared.Tests,                 PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="MigraDoc.Tests,               PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="MigraDoc.Tests-gdi,           PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="MigraDoc.Tests-wpf,           PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.Forms,               PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.Forms.Tests,         PublicKey=$(PDFsharpStronNamePublicKey)" />
+    <InternalsVisibleTo Include="PdfSharp.System" />
+    <InternalsVisibleTo Include="PdfSharp" />
+    <InternalsVisibleTo Include="PdfSharp-gdi" />
+    <InternalsVisibleTo Include="PdfSharp-wpf" />
+    <InternalsVisibleTo Include="PdfSharp.Imaging" />
+    <InternalsVisibleTo Include="PdfSharp.OpenType" />
+    <InternalsVisibleTo Include="PdfSharp.Charting" />
+    <InternalsVisibleTo Include="PdfSharp.Charting.Graphics" />
+    <InternalsVisibleTo Include="PdfSharp.Charting-gdi" />
+    <InternalsVisibleTo Include="PdfSharp.Charting-wpf" />
+    <InternalsVisibleTo Include="PdfSharp.Cryptography" />
+    <InternalsVisibleTo Include="PdfSharp.BarCodes" />
+    <InternalsVisibleTo Include="PdfSharp.BarCodes-gdi" />
+    <InternalsVisibleTo Include="PdfSharp.BarCodes-wpf" />
+    <InternalsVisibleTo Include="MigraDoc.DocumentObjectModel" />
+    <InternalsVisibleTo Include="MigraDoc.Rendering" />
+    <InternalsVisibleTo Include="MigraDoc.Rendering-gdi" />
+    <InternalsVisibleTo Include="MigraDoc.Rendering-wpf" />
+    <InternalsVisibleTo Include="MigraDoc.RtfRendering" />
+    <InternalsVisibleTo Include="MigraDoc.RtfRendering-gdi" />
+    <InternalsVisibleTo Include="MigraDoc.RtfRendering-wpf" />
+    <InternalsVisibleTo Include="PdfSharp.Quality" />
+    <InternalsVisibleTo Include="PdfSharp.Quality-gdi" />
+    <InternalsVisibleTo Include="PdfSharp.Quality-wpf" />
+    <!--<InternalsVisibleTo Include="PdfSharp.System" />-->
+    <InternalsVisibleTo Include="PdfSharp.Shared-gdi" />
+    <InternalsVisibleTo Include="PdfSharp.Shared-wpf" />
+    <InternalsVisibleTo Include="PdfSharp.TestHelper" />
+    <InternalsVisibleTo Include="PdfSharp.TestHelper-gdi" />
+    <InternalsVisibleTo Include="PdfSharp.TestHelper-wpf" />
+    <InternalsVisibleTo Include="PdfSharp.Tests" />
+    <InternalsVisibleTo Include="PdfSharp.Tests-gdi" />
+    <InternalsVisibleTo Include="PdfSharp.Tests-wpf" />
+    <InternalsVisibleTo Include="Shared.Tests" />
+    <InternalsVisibleTo Include="MigraDoc.Tests" />
+    <InternalsVisibleTo Include="MigraDoc.Tests-gdi" />
+    <InternalsVisibleTo Include="MigraDoc.Tests-wpf" />
+    <InternalsVisibleTo Include="PdfSharp.Forms" />
+    <InternalsVisibleTo Include="PdfSharp.Forms.Tests" />
 
-    <InternalsVisibleTo Include="PdfSharp.Graphics,            PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.PdfGraphics,         PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.Graphics.Pdf,        PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="PdfSharp.Graphics.Wpf,        PublicKey=$(PDFsharpStronNamePublicKey)" />
-    <InternalsVisibleTo Include="MigraDoc.Rendering.Graphics,  PublicKey=$(PDFsharpStronNamePublicKey)" />
+    <InternalsVisibleTo Include="PdfSharp.Graphics" />
+    <InternalsVisibleTo Include="PdfSharp.PdfGraphics" />
+    <InternalsVisibleTo Include="PdfSharp.Graphics.Pdf" />
+    <InternalsVisibleTo Include="PdfSharp.Graphics.Wpf" />
+    <InternalsVisibleTo Include="MigraDoc.Rendering.Graphics" />
   </ItemGroup>
 
   <!--<ItemGroup>
